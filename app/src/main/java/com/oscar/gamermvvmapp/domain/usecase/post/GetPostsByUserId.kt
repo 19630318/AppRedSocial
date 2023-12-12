@@ -1,0 +1,10 @@
+package com.oscar.gamermvvmapp.domain.usecase.post
+
+import com.oscar.gamermvvmapp.domain.repository.PostRepository
+import javax.inject.Inject
+
+class GetPostsByUserId @Inject constructor(private val postRepository: PostRepository) {
+
+    operator fun invoke(idUser: String) = postRepository.getPostByUserId(idUser)
+
+}
