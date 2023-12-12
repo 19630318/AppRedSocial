@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre de la Aplicación</title>
-</head>
+
 <body>
 
 <h1>AppRedSocial</h1>
@@ -32,4 +26,3 @@
     </ul>
 
 </body>
-</html>
