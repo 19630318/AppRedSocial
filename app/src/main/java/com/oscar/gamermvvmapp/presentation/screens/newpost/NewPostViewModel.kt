@@ -13,6 +13,7 @@ import com.oscar.gamermvvmapp.domain.model.Response
 import com.oscar.gamermvvmapp.domain.usecase.auth.AuthUseCase
 import com.oscar.gamermvvmapp.domain.usecase.post.PostUseCase
 import com.oscar.gamermvvmapp.presentation.utils.ComposeFileProvider
+import com.oscar.gamermvvmapp.presentation.utils.InternetAvailable
 import com.oscar.gamermvvmapp.presentation.utils.ResultingActivityHandler
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -33,6 +34,8 @@ class NewPostViewModel @Inject constructor(
     var createPostResponse by mutableStateOf<Response<Boolean>?>(null)
         private set
 
+    var wife by mutableStateOf(isInternerAvalibleView())
+
     var file: File? = null
 
     val radioOptions = listOf(
@@ -45,6 +48,8 @@ class NewPostViewModel @Inject constructor(
     )
 
     val resultHandler = resultingActivityHandler
+
+    fun isInternerAvalibleView(): Boolean = InternetAvailable.isInternetAvailable(context)
 
     fun onNewPost(){
         val post = Post(

@@ -1,11 +1,13 @@
 package com.oscar.gamermvvmapp.presentation.screens.postlist.components
 
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material.icons.outlined.Favorite
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -22,6 +24,7 @@ import androidx.navigation.NavHostController
 import coil.compose.SubcomposeAsyncImage
 import com.oscar.gamermvvmapp.R
 import com.oscar.gamermvvmapp.domain.model.Post
+import com.oscar.gamermvvmapp.presentation.components.DefaultButtom
 import com.oscar.gamermvvmapp.presentation.components.DefaultCircularProgressIndicator
 import com.oscar.gamermvvmapp.presentation.navigation.screen.details.DetailsScreen
 import com.oscar.gamermvvmapp.presentation.screens.postlist.PostViewModel
@@ -100,5 +103,4 @@ fun CardPost(navHostController: NavHostController, post: Post, vm: PostViewModel
             }
         }
     }
-
 }
